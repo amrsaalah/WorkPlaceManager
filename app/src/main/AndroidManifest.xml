@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.salah.amr.workplace"
+    android:versionCode="6"
+    android:versionName="1.41">
+
+    <permission android:name="CAMERA" />
+
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_text_red_white"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_text_red_white"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Employee.EmployeeActivity"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        <activity android:name=".EmployeeList.EmployeeListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BarChart.BarChartActivity" />
+        <activity android:name=".ChatRoom.Activity.ChatRoomActivity" />
+        <activity android:name=".Attendance.AttendanceActivity" />
+
+        <receiver
+            android:name=".Attendance.AttendanceAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".Attendance.BootAlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Settings.SettingsActivity" />
+        <activity android:name=".Tasks.TasksActivity" />
+
+        <receiver
+            android:name=".Tasks.NotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".AddImage.AddImageActivity"
+            android:exported="true" />
+        <activity android:name=".MyProfile.MyProfileActivity" />
+
+        <receiver
+            android:name=".Attendance.SalaryAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".EmployeeList.SyncService"
+            android:exported="false" />
+
+        <activity android:name=".Login.LoginActivity"></activity>
+    </application>
+
+</manifest>

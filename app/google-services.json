@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "447064771491",
+    "firebase_url": "https://workplace-620b4.firebaseio.com",
+    "project_id": "workplace-620b4",
+    "storage_bucket": "workplace-620b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447064771491:android:e891eaf395c97bbe",
+        "android_client_info": {
+          "package_name": "com.salah.amr.workplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447064771491-7m5smafih5msjfi8ch6447f95lcnp9eg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.salah.amr.workplace",
+            "certificate_hash": "953cc93d33a1ed701e8fd1d9944477d6507aefa3"
+          }
+        },
+        {
+          "client_id": "447064771491-662qfs2pkgj6mqlf8g0035h6nb14qk4t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIFY2IYzibqZYdqTZXVLDYxo44mm90CQw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447064771491-662qfs2pkgj6mqlf8g0035h6nb14qk4t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

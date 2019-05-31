@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="salaryType"
+        android:title="Salary Type"
+        android:summary="Choose monthly salary or annual salary"
+        android:defaultValue="0"
+        android:entries="@array/listArray"
+        android:entryValues="@array/itemArray"
+        android:negativeButtonText="Cancel"/>
+
+    <EditTextPreference
+        android:title="Late Penalty"
+        android:summary="Enter the penalty amount if Employee got late"
+        android:numeric="decimal"
+        android:defaultValue="10"
+        android:key="late"/>
+    <EditTextPreference
+        android:title="Absent Penalty"
+        android:summary="Enter the penalty amount if Employee got absent"
+        android:numeric="decimal"
+        android:defaultValue="20"
+        android:key="absent"
+        />
+
+    <Preference
+        android:title="Switch to Employee"
+        android:key="switch_employee"
+        android:summary="This will switch the application to employee but you can switch back from employee profile"/>
+
+</PreferenceScreen>

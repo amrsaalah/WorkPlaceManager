@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/beginning_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="You have to add employees first to see them here and mark their daily attendance"
+        android:textColor="@color/grey"
+        android:textSize="18sp"
+        android:layout_margin="16dp"/>
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:text="Attendance for 23/11/2017"
+                android:id="@+id/attendance_date"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="55">
+
+                </RelativeLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="OnTime"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/text_absent"
+                android:textColor="@color/black"
+                android:layout_weight="15"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Late"
+                android:id="@+id/text_late"
+                android:layout_toLeftOf="@id/text_absent"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                android:layout_weight="15"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="Absent"
+                android:id="@+id/text_ontime"
+                android:layout_toLeftOf="@id/text_late"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                android:layout_weight="15"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relLayout1">
+        <include layout="@layout/layout_bottom_navigation"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/relLayout1"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/recycler_view">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
